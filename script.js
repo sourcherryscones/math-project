@@ -72,6 +72,7 @@ function clear(){
 }
 
 function Refresh(){
+  submit.disabled = false;
   goodmess.innerHTML = 'Problem'
   error.innerHTML = '';
   let fir = randomize();
@@ -105,6 +106,7 @@ function check(){
     goodmess.innerHTML = 'Keep it up!'
   }
   scoretrack.innerHTML = "Problem Streak: " + streak; 
+  submit.disabled = true;
 }
 
 
