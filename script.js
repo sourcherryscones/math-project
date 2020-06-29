@@ -31,7 +31,16 @@ let test = new Problem(randomize(),randomize());
 
 let goodmess = document.getElementById("goodmess");
 
-let streak = 0;
+let streak=0;
+
+
+
+let highcookie=document.cookie
+if (highcookie!=''){
+  highscore=parseInt(highcookie);
+};
+
+let scoretrack = document.getElementById("streak");
 
 problems.push(test)
 
@@ -40,7 +49,6 @@ let prob = document.getElementById("prob");
 //let sol = document.getElementById("sol");
 
 prob.innerHTML = test.format();
-
 
 //functions
 
@@ -91,11 +99,12 @@ function check(){
     error.innerHTML = "You'll get it next time!";
     prob.style.color = "rgb(255,185,32)";
     prob.innerHTML = problems[count].format() + ' ' + problems[count].answer()
+    streak = 0;
   }
   if (streak===3){
     goodmess.innerHTML = 'Keep it up!'
-    streak = 0;
   }
+  scoretrack.innerHTML = "Problem Streak: " + streak; 
 }
 
 
