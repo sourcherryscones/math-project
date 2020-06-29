@@ -51,9 +51,3 @@ button{
 h5{
   color:rgb(252, 130, 140);  
 }
-
-.vertical{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
